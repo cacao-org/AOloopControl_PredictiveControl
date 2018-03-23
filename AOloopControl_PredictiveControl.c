@@ -10,7 +10,7 @@
  * 
  * @bug No known bugs.
  * 
- * 
+ *This is an OS X Sierra compatible version  - TC, 03/23/2018
  */
 
 
@@ -35,7 +35,7 @@
 #include <sys/stat.h>
 #include <pthread.h>
 
-#ifdef __MACH__
+/*#ifdef __MACH__
 #include <mach/mach_time.h>
 #define CLOCK_REALTIME 0
 #define CLOCK_MONOTONIC 0
@@ -50,9 +50,9 @@ int clock_gettime(int clk_id, struct mach_timespec *t) {
     t->tv_nsec = nseconds;
     return 0;
 }
-#else
+#else*/
 #include <time.h>
-#endif
+//#endif
 
 
 
